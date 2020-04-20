@@ -4,6 +4,10 @@ class Ghost < Formula
     url "https://github.com/axiom-labs/ghost"
     sha256 "ee8012ae5eff140e31212edfd59609f001fb6f2e6393751d08c80660661b6bdb"
 
+    devel do
+        url "https://github.com/axiom-labs/ghost.git", :branch => "master"
+    end
+
     def install
         system "ls"
         system "make", "all"
