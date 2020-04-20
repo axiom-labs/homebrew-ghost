@@ -1,15 +1,13 @@
 class Ghost < Formula
     desc "A simple general purpose programming language"
     homepage "https://github.com/axiom-labs/ghost"
-    url "https://github.com/axiom-labs/ghost", :tag => "v0.0.1"
-
-    devel do
-        url "https://github.com/axiom-labs/ghost.git", :branch => "master"
-    end
+    url "https://github.com/axiom-labs/ghost"
+    sha256 "ee8012ae5eff140e31212edfd59609f001fb6f2e6393751d08c80660661b6bdb"
 
     def install
-        system "make"
-        bin.install_symlink "dist/ghost"
+        system "ls"
+        system "make", "all"
+        bin.install "dist/ghost"
     end
 
     test do
